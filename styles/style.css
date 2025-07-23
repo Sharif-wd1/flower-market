@@ -118,3 +118,51 @@ nav {
     cursor: pointer;
     margin-top: 25px;
 }
+
+
+/* plants lover container */
+.plants-lover-section {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 133px;
+    /* max-height: 597px; */
+}
+.plants-lover-img {
+    position: relative;
+    /* width: 100%; */
+    height: auto;
+}
+.flower-store {
+    /* width: 100%; */
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+.trusted-badge {
+    position: absolute;
+    top: 0;
+    left: 91%;
+    transform: translate(-50%, -44%);
+    width: 286px;
+    height: auto;
+
+    
+}
+.plants-lover-content h3 {
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Noto Serif';
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.plants-lover-description{
+    margin-left: 34px;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 1.37rem;
+}
+.plants-lover-description ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
