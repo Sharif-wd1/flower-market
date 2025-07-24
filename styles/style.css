@@ -273,3 +273,39 @@ nav {
     margin-top: 15px;
 }
 
+
+/* join continer style */
+.join-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../assets/news-letter-bg.png');
+    height: 533px;
+}
+.join-container h2 {
+    font-size: 3.12rem;
+    font-weight: bold;
+    font-family: 'Noto Serif';
+    color: #ffffff;
+    margin-bottom: 23px;
+}
+.join-container .subscribe-box {
+    display: flex;
+    justify-content: center;
+    border: none;
+}
+.join-container .subscribe-box input {
+    padding: 15.5px 20px;
+    width: 644px;
+}
+.join-container .subscribe-box button {
+    padding: 19px 53.5px;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: #E95A08;
+    color: #ffffff;
+    border: none;
+}
+
