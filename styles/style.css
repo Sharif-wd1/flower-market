@@ -282,6 +282,9 @@ nav {
     justify-content: center;
     align-items: center;
     background-image: url('../assets/news-letter-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     height: 533px;
 }
 .join-container h2 {
@@ -299,6 +302,7 @@ nav {
 .join-container .subscribe-box input {
     padding: 15.5px 20px;
     width: 644px;
+    font-size: 1rem;
 }
 .join-container .subscribe-box button {
     padding: 19px 53.5px;
@@ -309,3 +313,230 @@ nav {
     border: none;
 }
 
+
+/* footer style */
+footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0;
+}
+.footer-content p {
+    max-width: 370px;
+    font-size: 22px;
+}
+.footer-option ul{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 26px;
+    column-gap: 90px;
+}
+.footer-option a {
+    text-decoration: none;
+    color: rgba(107, 114, 128, 1);
+}
+.footer-social-icon img{
+    margin-left: 24px;
+    /* display: flex; */
+    /* gap: 24px; */
+}
+
+
+
+/* Mobile responsive */
+@media (max-width: 767px) {
+    .logo img{
+        width: 63px;
+        height: 38px;
+    }
+    .a-hide {
+        display: none;
+    }
+    .banner {
+        flex-direction: column-reverse;
+    }
+    .nav-option ul {
+        gap: 0px;
+    }
+    .a-fourth {
+        font-weight: bold;
+    }
+    .a-fourth span {
+        margin-left: 5px;
+    }
+
+    /* banner */
+    .banner {
+        margin-top: 28px;
+        padding: 0;
+    }
+    .banner .banner-img {
+        display: block;
+        width: 100%;
+        margin-bottom: 28px;
+    }
+    .banner-title {
+        font-size: 24px;
+        font-weight: bold;
+        font-family: 'Noto Serif';
+        margin-bottom: 13px;
+    }
+    .description {
+        font-size: 14px;
+    }
+    .plants-container {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .plants-description {
+        padding: 0px;
+        font-size: 15px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .plants-card-section {
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 30px;
+    }
+    .plants-card img {
+        width: 171px;
+        height: auto;
+        object-fit: cover;
+    }
+    .plants-card .title {
+        font-size: 1rem;
+    }
+    .plants-card .price {
+        font-size: 1rem;
+    }
+    .plants-card button {
+        padding: 19px 30px;
+    }
+    .container {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .plants-lover-section {
+        flex-direction: column;
+        gap: 0;
+        max-width: 100%;
+    }
+    .plants-lover-img {
+        max-width: 100%;
+        margin-bottom: 18px;
+    } 
+    .plants-lover-img .flower-store{
+        width: 100%;
+        display: block;
+        height: auto;
+    }
+    .trusted-badge {
+        display: none;
+    }
+    .plants-lover-content h3 {
+        font-size: 26px;
+        font-weight: bold;
+        font-family: 'Noto Serif';
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+    .plants-lover-description {
+        font-size: 16px;
+    }
+
+
+
+     .latest-deal .latest-deal-top{
+        margin-bottom: 52px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+  .latest-deal .latest-deal-top h3 {
+    font-size: 32px;
+  }
+  .latest-deal .latest-deal-top {
+    font-size: 14px;
+  }
+  .latest-deal-bottom {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .bloom-box,
+  .ana-box,
+  .latest-deal-right {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px 0;
+  }
+
+  .bloom-box,
+  .ana-box {
+    height: 150px;
+  }
+
+  .latest-deal-right {
+    height: auto;
+    padding: 60px 0;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .latest-deal-right h3 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .latest-deal-right a {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .latest-deal-left {
+    width: 100%;
+  }
+
+  .latest-deal {
+    margin-bottom: 60px;
+  }
+
+
+  .join-container {
+        display: block;
+        width: 100%;
+        background-position: center;
+        height: auto;
+        padding: 80px 0;
+    }
+    .join-container h2 {
+        font-size: 22px;
+        margin-bottom: 23px;
+        font-weight: 500;
+    }
+    .join-container .subscribe-box input {
+        padding: 15.5px 10px;
+        width: 200px;
+    }
+    .join-container .subscribe-box button {
+        padding: 15.5px 10px;
+    }
+
+
+    footer {
+        flex-direction: column;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .footer-option ul {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .footer-social-icon img {
+        margin-left: 0;
+        margin-right: 24px;
+    }
+}
