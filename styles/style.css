@@ -166,3 +166,110 @@ nav {
     flex-direction: column;
     gap: 20px;
 }
+
+
+/* latest deal section style */
+.latest-deal {
+    margin-bottom: 130px;
+}
+.latest-deal .latest-deal-top {
+    text-align: center;
+    margin-bottom: 120px;
+}
+.latest-deal .latest-deal-top h3 {
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Noto Serif';
+    margin-bottom: 16px;
+}
+.latest-deal .latest-deal-top span {
+    color: #E95A08;
+}
+
+.latest-deal-bottom {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fc;
+}
+.latest-deal-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.bloom-box {
+    background-image: url('../assets/deal-bloom.png');
+}
+.ana-box {
+    background-image: url('../assets/deal-ana.png');
+}
+.latest-deal-right {
+    background-image: url('../assets/deal-zabo.png');
+}
+.bloom-box, 
+.ana-box,
+.latest-deal-right {
+    position: relative;
+    color: white;
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Noto Serif';
+    overflow: hidden;
+    border-radius: 10px;
+    z-index: 1;
+}
+.latest-deal-right {
+    width: 753px;
+    height: 423px;
+}
+.bloom-box h3,
+.bloom-box a,
+.ana-box h3,
+.ana-box a,
+.latest-deal-right h3,
+.latest-deal-right a {
+    z-index: 1;
+    position: relative;
+    color: white;
+}
+
+.bloom-box::before,
+.ana-box::before,
+.latest-deal-right::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.45);
+    z-index: 0;
+}
+
+.latest-deal-left h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: 'Noto Serif';
+    text-shadow: #f8f9fc;
+}
+.latest-deal-left a {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 19px;
+}
+.latest-deal-right h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-family: 'Noto Serif';
+}
+.latest-deal-right a {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
