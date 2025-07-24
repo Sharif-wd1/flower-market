@@ -2,7 +2,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Inter';
+    font-family: 'Inter', sans-serif;
 }
 
 /* common style */
@@ -11,8 +11,18 @@
     margin: 0 auto;
 }
 .description {
-    font-size: 1.3rem;
+    font-size: 22px;
     color: rgba(0, 0, 0, 0.5);
+}
+
+/* animation style */
+@keyframes spinBadge {
+    from {
+        transform: translate(-50%, -44%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -44%) rotate(360deg);
+    }
 }
 
 
@@ -25,6 +35,10 @@ nav {
     justify-content: space-between;
     align-items: center;
 }
+.nav-option {
+    display: flex;
+    gap: 48px;
+}
 .nav-option ul {
     display: flex;
     gap: 48px;
@@ -33,7 +47,6 @@ nav {
 .nav-option a {
     text-decoration: none;
     font-size: 1rem;
-    font-family: sans-serif;
 }
 .nav-option .a-first {
     font-weight: bold;
@@ -44,6 +57,11 @@ nav {
 }
 .nav-option .a-fourth {
     color: black;
+}
+.nav-cart a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 
@@ -57,7 +75,7 @@ nav {
 .banner-title {
     font-size: 4.1rem;
     font-weight: bold;
-    font-family: 'Noto Serif';
+    font-family: 'Noto Serif', serif;
 }
 .title-color {
     color: #E95A08;
@@ -79,7 +97,7 @@ nav {
 .plants-content h3 {
     font-size: 50px;
     font-weight: bold;
-    font-family: 'Noto Serif';
+    font-family: 'Noto Serif', serif;
     color: #000000;
 }
 .plants-description {
@@ -96,6 +114,13 @@ nav {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     row-gap: 30px;
+    column-gap: 20px;
+}
+.plants-card img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 .plants-card .title {
     font-size: 1.4rem;
@@ -126,15 +151,12 @@ nav {
     gap: 60px;
     align-items: center;
     margin-bottom: 133px;
-    /* max-height: 597px; */
 }
 .plants-lover-img {
     position: relative;
-    /* width: 100%; */
     height: auto;
 }
 .flower-store {
-    /* width: 100%; */
     height: auto;
     display: block;
     object-fit: cover;
@@ -146,13 +168,12 @@ nav {
     transform: translate(-50%, -44%);
     width: 286px;
     height: auto;
-
-    
+    animation: spinBadge 30s linear infinite;
 }
 .plants-lover-content h3 {
     font-size: 50px;
     font-weight: bold;
-    font-family: 'Noto Serif';
+    font-family: 'Noto Serif', serif;
     margin-right: 20px;
     margin-bottom: 20px;
 }
@@ -179,13 +200,12 @@ nav {
 .latest-deal .latest-deal-top h3 {
     font-size: 50px;
     font-weight: bold;
-    font-family: 'Noto Serif';
+    font-family: 'Noto Serif', serif;
     margin-bottom: 16px;
 }
 .latest-deal .latest-deal-top span {
     color: #E95A08;
 }
-
 .latest-deal-bottom {
     display: flex;
     gap: 20px;
@@ -221,14 +241,15 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: 'Noto Serif';
+    font-family: 'Noto Serif', serif;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 14px;
     z-index: 1;
 }
 .latest-deal-right {
     width: 753px;
     height: 423px;
+    border-radius: 22px;
 }
 .bloom-box h3,
 .bloom-box a,
@@ -254,7 +275,7 @@ nav {
 .latest-deal-left h3 {
     font-size: 1.5rem;
     font-weight: 500;
-    font-family: 'Noto Serif';
+    font-family: 'Noto Serif', serif;
     text-shadow: #f8f9fc;
 }
 .latest-deal-left a {
@@ -265,7 +286,7 @@ nav {
 .latest-deal-right h3 {
     font-size: 2.5rem;
     font-weight: 700;
-    font-family: 'Noto Serif';
+    font-family: 'Noto Serif', serif;
 }
 .latest-deal-right a {
     font-size: 1.75rem;
@@ -290,7 +311,7 @@ nav {
 .join-container h2 {
     font-size: 3.12rem;
     font-weight: bold;
-    font-family: 'Noto Serif';
+    font-family: 'Noto Serif', serif;
     color: #ffffff;
     margin-bottom: 23px;
 }
@@ -337,60 +358,85 @@ footer {
 }
 .footer-social-icon img{
     margin-left: 24px;
-    /* display: flex; */
-    /* gap: 24px; */
 }
 
 
 
 /* Mobile responsive */
 @media (max-width: 767px) {
+    .container {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .description {
+        font-size: 16px;
+    }
+
+    /* nav style */
+    nav {
+        margin-right: 2px;
+    }
     .logo img{
-        width: 63px;
-        height: 38px;
+        width: 100px;
+        height: auto;
     }
     .a-hide {
         display: none;
     }
-    .banner {
-        flex-direction: column-reverse;
+    .nav-option {
+        gap: 0;
+        text-align: center;
     }
     .nav-option ul {
         gap: 0px;
+        display: block;
     }
-    .a-fourth {
+    .nav-cart a {
+        gap: 15px;
+    }
+    .nav-cart i {
         font-weight: bold;
+        font-size: 20px;
     }
-    .a-fourth span {
-        margin-left: 5px;
+    .nav-cart span {
+        font-size: 16px;
     }
-
+    
     /* banner */
     .banner {
+        flex-direction: column-reverse;
         margin-top: 28px;
         padding: 0;
+        margin-left: 0px;
+        margin-right: 0px;
     }
     .banner .banner-img {
-        display: block;
         width: 100%;
+        display: block;
         margin-bottom: 28px;
+    }
+    .banner-content {
+        margin-left: 20px;
+        margin-right: 20px;
     }
     .banner-title {
         font-size: 24px;
         font-weight: bold;
-        font-family: 'Noto Serif';
+        font-family: 'Noto Serif', serif;
         margin-bottom: 13px;
     }
     .description {
         font-size: 14px;
     }
+
+    /* plants container section style */
     .plants-container {
         margin-left: 20px;
         margin-right: 20px;
     }
     .plants-description {
         padding: 0px;
-        font-size: 15px;
+        /* font-size: 15px; */
         margin-left: 20px;
         margin-right: 20px;
     }
@@ -401,7 +447,7 @@ footer {
         row-gap: 30px;
     }
     .plants-card img {
-        width: 171px;
+        width: 100%;
         height: auto;
         object-fit: cover;
     }
@@ -412,12 +458,11 @@ footer {
         font-size: 1rem;
     }
     .plants-card button {
+        width: 100%;
         padding: 19px 30px;
     }
-    .container {
-        margin-left: 20px;
-        margin-right: 20px;
-    }
+
+    /* plants lover section style */
     .plants-lover-section {
         flex-direction: column;
         gap: 0;
@@ -438,7 +483,7 @@ footer {
     .plants-lover-content h3 {
         font-size: 26px;
         font-weight: bold;
-        font-family: 'Noto Serif';
+        font-family: 'Noto Serif', serif;
         margin-right: 20px;
         margin-bottom: 20px;
     }
@@ -447,63 +492,71 @@ footer {
     }
 
 
-
-     .latest-deal .latest-deal-top{
+    /* latest deal section style */
+    .latest-deal .latest-deal-top{
         margin-bottom: 52px;
         margin-left: 20px;
         margin-right: 20px;
     }
-  .latest-deal .latest-deal-top h3 {
-    font-size: 32px;
-  }
-  .latest-deal .latest-deal-top {
-    font-size: 14px;
-  }
-  .latest-deal-bottom {
-    flex-direction: column;
-    padding: 20px;
-  }
+    .latest-deal .latest-deal-top h3 {
+        font-size: 32px;
+    }
+    .latest-deal .latest-deal-top {
+        font-size: 14px;
+    }
+    .latest-deal-bottom {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .bloom-box::before,
+    .ana-box::before,
+    .latest-deal-right::before {
+        background-color: rgba(0, 0, 0, 0.60);
+    }
 
-  .bloom-box,
-  .ana-box,
-  .latest-deal-right {
-    width: 100%;
-    max-width: 100%;
-    padding: 20px 0;
-  }
+    .bloom-box,
+    .ana-box,
+    .latest-deal-right {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px 0;
+    }
 
-  .bloom-box,
-  .ana-box {
-    height: 150px;
-  }
+    .bloom-box,
+    .ana-box {
+        height: 150px;
+    }
 
-  .latest-deal-right {
-    height: auto;
-    padding: 60px 0;
-    margin-left: 20px;
-    margin-right: 20px;
-  }
+    .latest-deal-right {
+        height: auto;
+        padding: 60px 0;
+        margin-left: 20px;
+        margin-right: 20px;
+        border-radius: 14px;
+    }
+    .latest-deal-right h3 {
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 500;
+        font-family: 'Noto Serif', serif;
+        text-shadow: #f8f9fc;
+    }
+    .latest-deal-right a {
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 500;
+        margin-top: 19px;
+    }
+    .latest-deal-left {
+        width: 100%;
+    }
+    .latest-deal {
+        margin-bottom: 60px;
+    }
 
-  .latest-deal-right h3 {
-    font-size: 1.8rem;
-    text-align: center;
-  }
 
-  .latest-deal-right a {
-    font-size: 1.2rem;
-    text-align: center;
-  }
-
-  .latest-deal-left {
-    width: 100%;
-  }
-
-  .latest-deal {
-    margin-bottom: 60px;
-  }
-
-
-  .join-container {
+    /* join container section style */
+    .join-container {
         display: block;
         width: 100%;
         background-position: center;
@@ -524,15 +577,20 @@ footer {
     }
 
 
+    /* footer style */
     footer {
         flex-direction: column;
         padding-left: 20px;
         padding-right: 20px;
     }
+    .footer-content p {
+        font-size: 17px;
+        margin-top: 13px;
+        margin-bottom: 35px;
+    }
     .footer-option ul {
         display: flex;
         flex-direction: column;
-        margin-top: 20px;
         margin-bottom: 20px;
     }
     .footer-social-icon img {
