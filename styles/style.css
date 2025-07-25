@@ -211,7 +211,6 @@ nav {
     gap: 20px;
     justify-content: center;
     align-items: center;
-    background-color: #f8f9fc;
 }
 .latest-deal-left {
     display: flex;
@@ -343,7 +342,8 @@ footer {
 }
 .footer-content p {
     max-width: 370px;
-    font-size: 22px;
+    font-size: 18px;
+    margin-top: 10px;
 }
 .footer-option ul{
     list-style: none;
@@ -356,10 +356,19 @@ footer {
     text-decoration: none;
     color: rgba(107, 114, 128, 1);
 }
-.footer-social-icon img{
-    margin-left: 24px;
+.footer-social-icon {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+    margin-top: 0;
+    padding: 0;
 }
-
+.footer-social-icon img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    display: block;
+}
 
 
 /* Mobile responsive */
@@ -459,7 +468,8 @@ footer {
     }
     .plants-card button {
         width: 100%;
-        padding: 19px 30px;
+        padding: 13px 10px;
+        font-size: 14px;
     }
 
     /* plants lover section style */
@@ -592,9 +602,5 @@ footer {
         display: flex;
         flex-direction: column;
         margin-bottom: 20px;
-    }
-    .footer-social-icon img {
-        margin-left: 0;
-        margin-right: 24px;
     }
 }
